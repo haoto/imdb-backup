@@ -65,7 +65,12 @@ function downloadMessage(url) {
 		if (!msg) {
 			throw 'Message text not found in page: ' + postId;
 		}
-		return msg.outerHTML;
+		links = r.getElementsByTagName('h1');
+		if (links.length != 1) {
+			throw 'Failed to parse board title';
+		}
+		html = '<div class="post">' + links[0].outerHTML + msg.outerHTML + '</div>';
+		return html;
 	}).catch(function(err) {
 		// ignore failed message download
 		error('FAILED: ' + url);
@@ -96,7 +101,7 @@ function downloadPage(url) {
 				return downloadMessage(url);
 			}).then(function(msg) {
 				gResults.push(msg);
-				log('Msgs downloaded: ' + gResults.length);
+				log('Msgs crawled: ' + gResults.length);
 			}).catch(function (err) {
 				// ignore parsing error
 				error(err);
