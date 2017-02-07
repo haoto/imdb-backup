@@ -7,9 +7,8 @@ Usage
 Pre-packaged version is available on the Chrome Web Store:
 https://chrome.google.com/webstore/detail/imdb-message-board-backup/dlmmknfhboinpfmdiennbilgeibodabk
 
-To back up your IMDb message board posts, navigate to your IMDb profile page, then click the extension icon and wait.
+To back up your IMDb message board posts, navigate to your IMDb profile page, then click the extension icon. You'll be prompted to download an HTML file When the extension finishes crawling.
 
-DO NOT interact with Chrome until downloading completes. (I'm sure this is easy to fix but I'm shit at Javascript and this is my first Chrome extension. Sorry.)
 
 Taking Over The Project
 -----------------------
